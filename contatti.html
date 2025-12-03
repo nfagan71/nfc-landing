@@ -43,21 +43,8 @@
 
     <footer class="footer">
         <div class="footer-left">© 1998–2025 NFC Software • Automazione & AI Integration</div>
-        <div class="footer-center"><span class="footer-label">Visite:</span> <span id="counter-value">...</span></div>
         <div class="footer-right"><a href="mailto:fagan.nicola@nfc.it">Email</a> <span>·</span> <a href="https://www.nfc.it" target="_blank">Sito ufficiale</a></div>
     </footer>
-
-    <!-- CONTATORE VISITE -->
-    <script>
-        fetch("https://hits.sh/nfagan71.github.io/nfc-landing?json")
-            .then(r => r.json())
-            .then(data => {
-                document.getElementById("counter-value").innerText = data.hits;
-            })
-            .catch(() => {
-                document.getElementById("counter-value").innerText = "—";
-            });
-    </script>
 
 </body>
 </html>
