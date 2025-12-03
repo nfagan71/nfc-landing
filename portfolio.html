@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio – NFC Software</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="hero small-hero">
+        <img src="assets/logo.png" alt="Logo NFC" class="logo small-logo">
+
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="servizi.html">Servizi</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="chi-sono.html">Chi sono</a>
+            <a href="contatti.html">Contatti</a>
+        </nav>
+    </header>
+
+    <section class="section">
+        <h2>Portfolio e Case Study</h2>
+        <p>Esempi di soluzioni sviluppate negli anni per aziende in ambito retail, finanza e industria.</p>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Automazione fatture PDF → ERP</h3>
+                <p>
+                    Sistema di estrazione automatica dati da fatture PDF,
+                    validazione tramite AI e integrazione diretta nel gestionale.
+                    Riduce errori del 95% e libera 12–15 ore settimanali.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Ordini di produzione automatici</h3>
+                <p>
+                    Generazione e sincronizzazione ordini di produzione da più fonti,
+                    aggiornamento real-time e allineamento tra reparti.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Modernizzazione software legacy</h3>
+                <p>
+                    Refactoring ed estensione applicazioni esistenti (C++/MFC),
+                    migliorando stabilità e introducendo nuove automazioni.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>ShopView – GDO</h3>
+                <p>
+                    Sviluppo, manutenzione e personalizzazione moduli per ShopView:
+                    promozioni, articoli, flussi di cassa, interfacce di reparto.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-left">© 1998–2025 NFC Software • Automazione & AI Integration</div>
+        <div class="footer-center"><span class="footer-label">Visite:</span> <span id="counter-value">...</span></div>
+        <div class="footer-right"><a href="mailto:fagan.nicola@nfc.it">Email</a> <span>·</span> <a href="https://www.nfc.it" target="_blank">Sito ufficiale</a></div>
+    </footer>
+
+    <script>
+        const counterName = "nfc_it_landing_counter";
+        fetch(`https://api.countapi.xyz/hit/${counterName}/visits`)
+            .then(r => r.json())
+            .then(data => { document.getElementById("counter-value").innerText = data.value; });
+    </script>
+
+</body>
+</html>

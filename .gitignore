@@ -1,0 +1,78 @@
+# ===============================
+#   VISUAL STUDIO / VS CODE
+# ===============================
+
+.vs/
+.vscode/
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+
+# Visual Studio sqlite cache
+*.dbmdl
+
+# ASP.NET / .NET stuff (non ti serve ma lo metto per sicurezza)
+bin/
+obj/
+Debug/
+Release/
+x64/
+x86/
+
+# Backup e temporary
+*.tmp
+*.bak
+*.log
+
+# File generati automaticamente da Visual Studio
+*.ipch
+*.pch
+*.cache
+*.pdb
+*.obj
+*.ilk
+*.aps
+*.ncb
+*.res
+*.tlog
+*.sdf
+
+# ===============================
+#   SISTEMI OPERATIVI
+# ===============================
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+*~
+
+# ===============================
+#   NODE / TOOLING (futuro?)
+# ===============================
+
+node_modules/
+npm-debug.log
+yarn-error.log
+dist/
+build/
+
+# ===============================
+#   PROGETTO WEB STATICO
+# ===============================
+
+# Cache browser locali o build tool
+.cache/
+.temp/
+.temp_build/
+
+# Nessun file del sito viene escluso
+# (tutto ciò che è HTML / CSS / JS / assets rimane)

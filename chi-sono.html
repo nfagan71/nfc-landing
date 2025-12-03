@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi sono – NFC Software</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="hero small-hero">
+        <img src="assets/logo.png" alt="Logo NFC" class="logo small-logo">
+
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="servizi.html">Servizi</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="chi-sono.html">Chi sono</a>
+            <a href="contatti.html">Contatti</a>
+        </nav>
+    </header>
+
+    <section class="section about-wrapper">
+        <div class="about-text">
+            <h2>Chi sono</h2>
+
+            <p>
+                Mi chiamo Nicola Fagan e lavoro nello sviluppo software e nell’automazione
+                dal 1998. Ho iniziato sviluppando soluzioni gestionali e sistemi per la
+                grande distribuzione, la finanza e l’industria.
+            </p>
+
+            <p>
+                Oggi progetto sistemi di automazione documentale, workflow digitali e
+                integrazioni software basate su AI e microservizi, con l’obiettivo di migliorare
+                efficienza, qualità e continuità operativa per le aziende.
+            </p>
+
+            <h3>Esperienza</h3>
+            <ul>
+                <li>Oltre 25 anni di esperienza nello sviluppo software</li>
+                <li>Automazione processi e documenti (OCR/AI)</li>
+                <li>Python, C++/MFC, workflow digitali</li>
+                <li>Integrazioni ERP, database, sistemi industriali</li>
+                <li>Sviluppo su ShopView (GDO)</li>
+                <li>Fondatore storico di NFC dal 1998</li>
+            </ul>
+        </div>
+
+        <div class="about-photo">
+            <img src="assets/profile.jpg" alt="Foto profilo">
+        </div>
+    </section>
+
+    <section class="section alt">
+        <div class="about-gallery">
+            <img src="assets/banner1.png" alt="Automazione AI">
+            <img src="assets/banner2.png" alt="Industria e sistemi">
+            <img src="assets/banner3.png" alt="GDO">
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-left">© 1998–2025 NFC Software • Automazione & AI Integration</div>
+        <div class="footer-center"><span class="footer-label">Visite:</span> <span id="counter-value">...</span></div>
+        <div class="footer-right"><a href="mailto:fagan.nicola@nfc.it">Email</a> <span>·</span> <a href="https://www.nfc.it" target="_blank">Sito ufficiale</a></div>
+    </footer>
+
+    <script>
+        const counterName = "nfc_it_landing_counter";
+        fetch(`https://api.countapi.xyz/hit/${counterName}/visits`)
+            .then(r => r.json())
+            .then(data => { document.getElementById("counter-value").innerText = data.value; });
+    </script>
+
+</body>
+</html>

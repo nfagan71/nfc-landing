@@ -15,16 +15,30 @@
 </head>
 
 <body>
+
+    <!-- HERO + LOGO -->
     <header class="hero">
         <img src="assets/logo.png" alt="Logo NFC" class="logo">
+
+        <!-- NAVBAR -->
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="servizi.html">Servizi</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="chi-sono.html">Chi sono</a>
+            <a href="contatti.html">Contatti</a>
+        </nav>
+
         <h1>nfc software – automazione e soluzioni digitali</h1>
+
         <p class="subtitle">
-            Soluzioni di automazione, AI e integrazione software per rendere i processi aziendali più semplici, veloci e affidabili.
+            Soluzioni di automazione, AI e integrazione software che rendono i processi aziendali più semplici, veloci e affidabili.
         </p>
-        <a href="mailto:info@nfc.it" class="button">Contattaci</a>
+
+        <a href="mailto:fagan.nicola@nfc.it" class="button">Contattaci</a>
     </header>
 
-    <!-- Soluzioni -->
+    <!-- SOLUZIONI -->
     <section class="section">
         <h2>Soluzioni di automazione e integrazione</h2>
 
@@ -59,13 +73,15 @@
         </div>
     </section>
 
-    <!-- Approccio -->
+    <!-- APPROCCIO -->
     <section class="section alt">
         <h2>Approccio</h2>
+
         <p>
             Ogni progetto parte dall’analisi del processo reale: identifico dove si perdono tempo, informazioni e qualità.
             Progetto soluzioni di automazione che si integrano con ciò che l’azienda già utilizza, evitando cambiamenti invasivi o costosi.
         </p>
+
         <p>
             Le soluzioni vengono implementate in modo modulare e misurabile: ore-uomo risparmiate, riduzione degli errori,
             eliminazione delle attività ripetitive e maggiore continuità operativa.
@@ -73,15 +89,43 @@
         </p>
     </section>
 
-    <!-- Contatti -->
+    <!-- CONTATTI -->
     <section class="section contact">
         <h2>Contatti</h2>
         <p>📧 <a href="mailto:fagan.nicola@nfc.it">fagan.nicola@nfc.it</a></p>
         <p>🌐 <a href="https://www.nfc.it" target="_blank">www.nfc.it</a> (in aggiornamento)</p>
     </section>
 
-    <footer>
-        © 1998–2025 NFC Software
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-left">
+            © 1998–2025 NFC Software • Automazione & AI Integration
+        </div>
+
+        <div class="footer-center">
+            <span class="footer-label">Visite:</span>
+            <span id="counter-value">...</span>
+        </div>
+
+        <div class="footer-right">
+            <a href="mailto:fagan.nicola@nfc.it">Email</a>
+            <span>·</span>
+            <a href="https://www.nfc.it" target="_blank">Sito ufficiale</a>
+        </div>
     </footer>
+
+    <!-- CONTATORE VISITE -->
+    <script>
+        const counterName = "nfc_it_landing_counter";
+        fetch(`https://api.countapi.xyz/hit/${counterName}/visits`)
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("counter-value").innerText = data.value;
+            })
+            .catch(() => {
+                document.getElementById("counter-value").innerText = "—";
+            });
+    </script>
+
 </body>
 </html>
