@@ -116,16 +116,16 @@
 
     <!-- CONTATORE VISITE -->
     <script>
-        const counterName = "nfc_it_landing_counter";
-        fetch(`https://api.countapi.xyz/hit/${counterName}/visits`)
-            .then(response => response.json())
+        fetch("https://hits.sh/nfagan71.github.io/nfc-landing?json")
+            .then(r => r.json())
             .then(data => {
-                document.getElementById("counter-value").innerText = data.value;
+                document.getElementById("counter-value").innerText = data.hits;
             })
             .catch(() => {
                 document.getElementById("counter-value").innerText = "—";
             });
     </script>
+
 
 </body>
 </html>
